@@ -20,7 +20,7 @@ The project contains Dockerfiles for the frontend, backend, and MySQL. Additiona
          sudo systemctl stop mysql
          sudo docker start mysqlcontainer
 ## Challenge 2:Application Not Showing Submitted Data
-   ## If the application does not show submitted data, follow these steps:
+ If the application does not show submitted data, follow these steps:
    ## 1.Access the MySQL container's bash:
              sudo docker exec -it mysqlcontainer /bin/bash
    ## 2.Log in to MySQL:
