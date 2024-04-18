@@ -37,7 +37,44 @@ The project contains Dockerfiles for the frontend, backend, and MySQL. Additiona
 
 # Files to Be Changed
  ## 1.FrontEnd/views/listEmployee.ejs:
-  Update the listEmployee.ejs file in the frontend views directory to reflect changes in data display.
+  # Update the listEmployee.ejs file in the frontend views directory to reflect changes in data display.
+       <%- include('./layouts/head.ejs') %>
+
+    </head>
+
+     <body>
+    <%- include('./layouts/navbar.ejs') %>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Emp. Code</th>
+                <th scope="col">Name</th>
+                <th scope="col">Contact</th>
+                <th scope="col">Address</th>
+                <th scope="col">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% if (data && data.length) { %>
+                <% for (let emp of data) { %>
+                    <tr>
+                        <th scope="row"><%= emp.emp_id %> </th>
+                        <td><%= emp.emp_name %> </td>
+                        <td><%= emp.emp_contact %> </td>
+                        <td><%= emp.emp_add %> </td>
+                        <td><a href="/delete/<%= emp.emp_id %> "><button class="btn-sm btn-danger">Delete</button></a></td>
+                    </tr>
+                <% } %>
+            <% } else { %>
+                <tr>
+                    <td colspan="5">No employee data available</td>
+                </tr>
+            <% } %>
+        </tbody>
+    </table>
+
+    <% -include('./layouts/end.ejs') %>    
    ## 2.ROUTES.js:
    Update the ROUTES.js file to change the host field to the internal IP address of the VM.
    ## 3.backend/db/conn.js:
