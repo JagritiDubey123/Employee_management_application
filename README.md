@@ -36,11 +36,11 @@ The project contains Dockerfiles for the frontend, backend, and MySQL. Additiona
           sudo docker inspect mynetwork
 
 # Files to Be Changed
-  1.frontend/views/listEmployee.ejs:
+ ## 1.frontend/views/listEmployee.ejs:
            Update the listEmployee.ejs file in the frontend views directory to reflect changes in data display.
-    2.ROUTES.js:
+   ## 2.ROUTES.js:
            Update the ROUTES.js file to change the host field to the internal IP address of the VM.
-    3.backend/db/conn.js:
+   ## 3.backend/db/conn.js:
            Update the conn.js file in the backend db directory to replace the hostname with the MySQL container's name and update the database username and password.
 
            
