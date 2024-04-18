@@ -37,7 +37,7 @@ The project contains Dockerfiles for the frontend, backend, and MySQL. Additiona
 
 # Files to Be Changed
  ## 1.FrontEnd/views/listEmployee.ejs:
-  # Update the listEmployee.ejs file in the frontend views directory to reflect changes in data display.
+  ## Update the listEmployee.ejs file in the frontend views directory to reflect changes in data display.
        <%- include('./layouts/head.ejs') %>
 
     </head>
